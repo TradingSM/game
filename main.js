@@ -146,5 +146,9 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+
 resetGame();
 loop();
